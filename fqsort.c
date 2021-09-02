@@ -7,7 +7,9 @@
 */
 
 int compare (const void * a, const void * b){
-  return (carg(*(double complex*)a) - carg(*(double complex*)b) );
+  if (carg((double complex)(*(double complex*)a)) > carg((double complex)(*(double complex*)b)))
+    return 1 ;
+  return -1 ;
 }
 
 const int TAILLE = 100;
